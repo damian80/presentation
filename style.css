@@ -4,6 +4,7 @@
     --page-2-color: tan;
     --page-3-color: teal;
     --page-4-color: slateblue;
+    --animate-speed: 2s;
 }
 
 body {
@@ -40,4 +41,66 @@ body {
     justify-content: center;
     text-align: center;
     padding: 0 4rem;
+}
+
+.page h1 {
+    font-size: 4rem;
+    line-height: 1.2;
+    margin: 1rem;
+}
+
+.page p {
+    font-size: 1.3rem;
+}
+
+.btn {
+    display: inline-block;
+    padding: 1rem 2rem;
+    background-color: #f4f4f4;
+    color: #333;
+    text-decoration: none;
+    border: none;
+    margin-top: 1rem;
+    font-size: 1rem;
+    /*(16px)*/
+    transition: all 0.3s ease-in;
+
+}
+
+.btn:hover,
+.btn-dark {
+    background-color: #333;
+    color: white;
+}
+
+.btn-dark:hover {
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+/* PAGE ANIMATIONS*/
+
+#page-1 h1 {
+    transform: translateY(-1200px);
+    animation: heading var(--animate-speed)forwards ease-in;
+}
+
+@keyframes heading {
+    to {
+        transform: translateY(0);
+
+    }
+}
+
+#page-1 p {
+    transform: translatex(-1800px);
+    animation: text var(--animate-speed)forwards ease-in 1s;
+    -webkit-animation: text var(--animate-speed)forwards ease-in 1s;
+}
+
+@keyframes text {
+    to {
+        transform: translateX(0);
+
+    }
 }
