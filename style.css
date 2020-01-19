@@ -1,0 +1,43 @@
+/* CSS VARIABLES */
+:root {
+    --page-1-color: steelblue;
+    --page-2-color: tan;
+    --page-3-color: teal;
+    --page-4-color: slateblue;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.4;
+    color: white;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+/* PAGE COLORS*/
+#page-1 {
+    background-color: var(--page-1-color)
+}
+
+#page-2 {
+    background-color: var(--page-2-color)
+}
+
+#page-3 {
+    background-color: var(--page-3-color)
+}
+
+#page-4 {
+    background-color: var(--page-4-color)
+}
+
+.page {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 0 4rem;
+}
